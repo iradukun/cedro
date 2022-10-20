@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from './Home';
+import BasicInfo from './components/BasicInfo';
+import DamageInfo from './components/DamageInfo';
+import PhotoInput from './components/PhotoInput';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-white">
+      <div className='flex bg-white w-full'>
+        <Home/>
+        <div className='flex bg-[#F8F8F8] flex-col gap-2'>
+          <BasicInfo/>
+          <DamageInfo/>
+          <PhotoInput/>
+        </div>
+      </div>
     </div>
   );
 }
